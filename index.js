@@ -22,7 +22,7 @@ app.use('/api',pembayaranRoute);
 let pembayaranDetailRoute = require('./pembayaranDetail/pembayaranDetailRoute.js');
 app.use('/api',pembayaranDetailRoute);
 
-mong.connect('mongodb://ramagiox:ramagiox@ds121535.mlab.com:21535/dbrumahsakit');
+mong.connect(process.env.MONGOLAB_URI || 'mongodb://ramagiox:ramagiox@ds121535.mlab.com:21535/dbrumahsakit');
 
 app.set('port', (process.env.PORT || 8889));
 
