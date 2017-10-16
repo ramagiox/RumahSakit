@@ -22,10 +22,8 @@ app.use('/api',pembayaranRoute);
 let pembayaranDetailRoute = require('./pembayaranDetail/pembayaranDetailRoute.js');
 app.use('/api',pembayaranDetailRoute);
 
-mong.connect(process.env.MONGOLAB_URI || 'mongodb://ramagiox:ramagiox@ds121535.mlab.com:21535/dbrumahsakit');
+mong.connect('mongodb://ramagiox:ramagiox@ds121535.mlab.com:21535/dbrumahsakit');
 
-app.set('port', (process.env.PORT || 8889));
-
-app.listen(app.get('port'), function() {
+app.listen(process.env.PORT || 8889, function() {
   console.log('Node app is running on port', app.get('port'));
 });
