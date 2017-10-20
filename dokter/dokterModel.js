@@ -6,7 +6,8 @@ let dokter = mong.Schema({
 	Spesialis : String,
 	HariTugas : String,
 	JamTugasMulai : String,
-	JamTugasSelesai : String
+	JamTugasSelesai : String,
+	KeteranganTambahan : String
 });
 
 let Dokter = module.exports = mong.model("Dokter", dokter, "Dokter");
