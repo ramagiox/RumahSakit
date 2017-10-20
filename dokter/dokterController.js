@@ -7,6 +7,10 @@ module.exports.getDokterById = function(id,callback,limit){
     Dokter.findById(id,callback).limit(limit);
 }
 
+module.exports.getDokterByNama = function(nama,callback,limit){
+    Dokter.findOne(nama,callback).limit(limit);
+}
+
 module.exports.createDokter = function(akses,callback){
     Dokter.create(akses,callback);
 }
