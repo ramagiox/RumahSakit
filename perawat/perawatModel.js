@@ -5,7 +5,7 @@ let perawat = mong.Schema({
 	NamaPerawat : String,
 	AlamatPerawat : String,
 	KdProvinsi : String,
-	TglMulaiKerja : Date,
+	TglMulaiKerja : String,
 	TingkatPerawat : String
 });
 
